@@ -114,9 +114,9 @@ const problemDatabase: Problem[] = [
 ];
 
 const resourceDatabase: Resource[] = [
-    { title: 'AAPT Past Exams', url: 'https://www.aapt.org/physicsteam/pastexams.cfm', description: 'Official source for past F=ma and USAPhO exams.'},
-    { title: 'Introduction to Classical Mechanics (Morin)', url: 'https://physicscourses.colorado.edu/phys1110/phys1110_fa19/DavidMorin_IntroductionToClassicalMechanics.pdf', description: 'Challenging and comprehensive text with excellent problems.'},
-    { title: 'HyperPhysics', url: 'http://hyperphysics.phy-astr.gsu.edu/hbase/index.html', description: 'A concept map-based resource for a wide range of topics.'},
+    { title: 'AAPT Past Exams', url: 'https://www.aapt.org/Common2022/pastexams.cfm', description: 'Official source for past F=ma and USAPhO exams.'},
+    { title: 'US Physics Team Handouts', url: 'https://knzhou.github.io/', description: 'Check "Teaching" section for problems.'},
+    { title: 'ΣF=ma Topics by Question', url: 'https://kevinshuang.com/teaching/resources/', description: 'A list of topics by question on each years ΣF=ma exam.'},
 ];
 
 const formularyDatabase: Record<string, Formula[]> = {
