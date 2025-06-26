@@ -28,7 +28,7 @@ interface Formula {
 
 interface TopicNote {
     topic: string;
-    content: string; // Detailed notes with LaTeX
+    content: string;
 }
 
 interface Tier {
@@ -202,20 +202,24 @@ const notesDatabase: TopicNote[] = [
         content: `<h3>Core Concepts</h3>
         <p>Think of rotational motion as a complete parallel to the linear motion you already know. For every concept in kinematics and dynamics, there is a rotational analog. The key is to learn the new variables and their relationships.</p>
         <h4>The Analogy is Everything:</h4>
-        <table style="width:100%; border-collapse: collapse;">
-            <tr style="background-color:#f2f2f2;">
-                <th style="padding: 8px; border: 1px solid #ddd;">Linear Concept</th>
-                <th style="padding: 8px; border: 1px solid #ddd;">Rotational Analog</th>
-                <th style="padding: 8px; border: 1px solid #ddd;">Relationship</th>
-            </tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Position ($x$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angle ($\\theta$)</td><td style="padding: 8px; border: 1px solid #ddd;">$x = r\\theta$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Velocity ($v$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Velocity ($\\omega$)</td><td style="padding: 8px; border: 1px solid #ddd;">$v = r\\omega$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Acceleration ($a$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Acceleration ($\\alpha$)</td><td style="padding: 8px; border: 1px solid #ddd;">$a_{tan} = r\\alpha$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Mass ($m$, inertia)</td><td style="padding: 8px; border: 1px solid #ddd;">Moment of Inertia ($I$)</td><td style="padding: 8px; border: 1px solid #ddd;">$I = \\sum m_i r_i^2$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Force ($F$)</td><td style="padding: 8px; border: 1px solid #ddd;">Torque ($\\tau$)</td><td style="padding: 8px; border: 1px solid #ddd;">$\\vec{\\tau} = \\vec{r} \\times \\vec{F}$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">$\\sum F = ma$</td><td style="padding: 8px; border: 1px solid #ddd;">$\\sum \\tau = I\\alpha$</td><td style="padding: 8px; border: 1px solid #ddd;">Newton's 2nd Law for Rotation</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Momentum ($p=mv$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Momentum ($L=I\\omega$)</td><td style="padding: 8px; border: 1px solid #ddd;">$\\vec{L} = \\vec{r} \\times \\vec{p}$</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;">Kinetic Energy ($K=\\frac{1}{2}mv^2$)</td><td style="padding: 8px; border: 1px solid #ddd;">Rotational K ($K=\\frac{1}{2}I\\omega^2$)</td><td style="padding: 8px; border: 1px solid #ddd;">Energy of Rotation</td></tr>
+        <table style="width:100%; border-collapse: collapse; color: var(--text-color);">
+            <thead>
+                <tr>
+                    <th style="background-color: #2d3436; color: #ffffff; padding: 12px 15px; border: 1px solid #454d55; text-align: left;">Linear Concept</th>
+                    <th style="background-color: #2d3436; color: #ffffff; padding: 12px 15px; border: 1px solid #454d55; text-align: left;">Rotational Analog</th>
+                    <th style="background-color: #2d3436; color: #ffffff; padding: 12px 15px; border: 1px solid #454d55; text-align: left;">Relationship</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Position ($x$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Angle ($\\theta$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$x = r\\theta$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Velocity ($v$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Angular Velocity ($\\omega$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$v = r\\omega$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Acceleration ($a$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Angular Acceleration ($\\alpha$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$a_{tan} = r\\alpha$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Mass ($m$, inertia)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Moment of Inertia ($I$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$I = \\sum m_i r_i^2$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Force ($F$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Torque ($\\tau$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$\\vec{\\tau} = \\vec{r} \\times \\vec{F}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">$\\sum F = ma$</td><td style="padding: 8px; border: 1px solid var(--border-color);">$\\sum \\tau = I\\alpha$</td><td style="padding: 8px; border: 1px solid var(--border-color);">Newton's 2nd Law for Rotation</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Momentum ($p=mv$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Angular Momentum ($L=I\\omega$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">$\\vec{L} = \\vec{r} \\times \\vec{p}$</td></tr>
+                <tr><td style="padding: 8px; border: 1px solid var(--border-color);">Kinetic Energy ($K=\\frac{1}{2}mv^2$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Rotational K ($K=\\frac{1}{2}I\\omega^2$)</td><td style="padding: 8px; border: 1px solid var(--border-color);">Energy of Rotation</td></tr>
+            </tbody>
         </table>
         <p><strong>Rolling Without Slipping:</strong> This is a common and important special case. It connects translation and rotation. An object that rolls without slipping has a total kinetic energy that is the sum of its translational and rotational kinetic energies: $K_{total} = K_{trans} + K_{rot} = \\frac{1}{2}mv_{cm}^2 + \\frac{1}{2}I_{cm}\\omega^2$. The no-slip condition is $v_{cm} = R\\omega$.</p>
         <p><strong>Conservation of Angular Momentum:</strong> Just as momentum is conserved when there's no net external force, angular momentum ($\vec{L}$) is conserved when there's no net external <em>torque</em>. This is why an ice skater spins faster when they pull their arms in: their moment of inertia ($I$) decreases, so their angular velocity ($\omega$) must increase to keep $L = I\omega$ constant.</p>`
@@ -449,7 +453,7 @@ const PracticePage: React.FC<{ addXp: (xp: number) => void }> = ({ addXp }) => {
         setPracticeProblems(problems);
         setCurrentProblemIndex(0);
         setUserAnswer(null); setShowSolution(false); setScore(0);
-        if (isTimed) setTimeLeft(problems.length * 90); // 90 seconds per question
+        if (isTimed) setTimeLeft(problems.length * 90);
         setSessionStarted(true);
     };
 

@@ -27,3 +27,8 @@
 .animate-fade-in-fast {
   animation: fade-in-fast 0.3s ease-out forwards;
 }
+.styled-table th {
+  background-color: #2d3436; /* A dark, modern grey */
+  color: #ffffff;           /* White text for contrast */
+  border-color: #454d55;     /* A slightly lighter border for a subtle effect */
+}
