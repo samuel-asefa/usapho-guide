@@ -1,4 +1,5 @@
-![USAPhO-Guide Banner](/public/USAPhOGuide.jpg "USAPhO-Guide Banner")
+![USAPhO-Guide Banner](/public/USAPhOGuideBanner.jpg "USAPhO-Guide Banner")
+
 A collection of practice resources to study for the ΣF=ma & USAPhO exams.
 
 ### Features
