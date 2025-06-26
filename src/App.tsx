@@ -139,26 +139,128 @@ const notesDatabase: TopicNote[] = [
     {
         topic: 'Kinematics',
         content: `<h3>Core Concepts</h3>
-        Kinematics describes motion without considering its causes. The key variables are displacement ($x$), velocity ($v$), and acceleration ($a$). For **constant acceleration**, which is common in F=ma problems, the following equations are fundamental:
+        <p>Kinematics is the language of motion. It's all about describing how things move without getting bogged down by *why* they move. Your goal is to become fluent in the variables: displacement ($x$), velocity ($v$), and acceleration ($a$). For the vast majority of F=ma and USAPhO problems, you'll be dealing with <strong>constant acceleration</strong>. These four equations are your bread and butter; know them so well you could recite them in your sleep.</p>
         <ul>
-          <li>$v = v_0 + at$</li>
-          <li>$\\Delta x = v_0t + \\frac{1}{2}at^2$</li>
-          <li>$v^2 = v_0^2 + 2a\\Delta x$</li>
-          <li>$\\Delta x = \\frac{v_0+v}{2}t$</li>
+          <li>$v = v_0 + at$  (Velocity as a function of time)</li>
+          <li>$\\Delta x = v_0t + \\frac{1}{2}at^2$ (Position as a function of time)</li>
+          <li>$v^2 = v_0^2 + 2a\\Delta x$ (The "timeless" equation - very useful when time isn't given or asked for)</li>
+          <li>$\\Delta x = \\frac{v_0+v}{2}t$ (Position as a function of average velocity)</li>
         </ul>
-        For motion in two dimensions, treat the $x$ and $y$ components independently. Projectile motion is a classic example where acceleration in the x-direction is $a_x = 0$ and acceleration in the y-direction is $a_y = -g$.`
+        <p>When motion goes 2D, like a cannonball flying through the air (a classic projectile motion problem), the secret is to break it down. Treat the horizontal ($x$) and vertical ($y$) motions as two separate, one-dimensional problems. They are linked only by the time variable, $t$. For projectiles near Earth's surface, you'll almost always use $a_x = 0$ (constant velocity) and $a_y = -g$ (constant acceleration downwards).</p>`
     },
     {
         topic: 'Dynamics',
         content: `<h3>Core Concepts</h3>
-        Dynamics connects forces to motion, governed by **Newton's Laws**.
+        <p>If kinematics is the 'how', dynamics is the 'why'. It's the heart of classical mechanics, and it's all built on the foundation of <strong>Newton's Laws</strong>.</p>
         <ol>
-          <li><b>First Law (Inertia):</b> An object remains at rest or in constant velocity motion unless acted upon by a net external force.</li>
-          <li><b>Second Law:</b> The net force on an object is equal to its mass times its acceleration ($\\sum \\vec{F} = m\\vec{a}$). This is the most important equation in classical mechanics.</li>
-          <li><b>Third Law:</b> For every action, there is an equal and opposite reaction.</li>
+          <li><b>First Law (Inertia):</b> An object in motion stays in motion, an object at rest stays at rest, unless a net external force messes with it. Basically, objects don't change their velocity on their own.</li>
+          <li><b>Second Law:</b> The big one. The powerhouse equation of physics: $\\sum \\vec{F} = m\\vec{a}$. The net force on an object is directly proportional to its acceleration. Master this, and you're halfway there. Remember that both force and acceleration are vectors, so you'll be applying this law along your coordinate axes.</li>
+          <li><b>Third Law:</b> Forces come in pairs. For every "action" force, there's an equal and opposite "reaction" force. If your finger pushes on a wall, the wall pushes back on your finger with the same force. This is crucial for analyzing systems with multiple objects.</li>
         </ol>
-        <h4>Problem-Solving Strategy:</h4>
-        <p>1. Draw a Free-Body Diagram (FBD) for every object of interest. 2. Choose a coordinate system. 3. Apply $\\sum F = ma$ to each axis.</p>`
+        <h4>Problem-Solving Strategy: The Unbreakable Routine</h4>
+        <p>For nearly any dynamics problem, follow these steps religiously:</p>
+        <p>1. <strong>Draw a Free-Body Diagram (FBD)</strong> for every single object you care about. Isolate the object and draw all the forces acting *on* it. Don't draw forces the object exerts on other things. This is the single most important step. <br>2. <strong>Choose a Coordinate System.</strong> Often, tilting your axes to align with the acceleration can save you a lot of trigonometry. <br>3. <strong>Apply $\\sum F = ma$</strong> to each axis. For an object in equilibrium (not accelerating), this simplifies to $\\sum F = 0$.</p>`
+    },
+    {
+        topic: 'Energy & Work',
+        content: `<h3>Core Concepts</h3>
+        <p>Energy methods are often the "easy way out" of a complicated dynamics problem. If you don't care about time or specific forces, think about energy. It's a scalar, which makes it easier to work with than vector forces.</p>
+        <ul>
+            <li><strong>Work ($W$):</strong> Work is done when a force causes displacement. It's defined as $W = \\vec{F} \\cdot \\vec{d} = Fd\\cos\\theta$. Only the component of the force parallel to the displacement does work.</li>
+            <li><strong>Kinetic Energy ($K$):</strong> The energy of motion. $K = \\frac{1}{2}mv^2$.</li>
+            <li><strong>Work-Energy Theorem:</strong> This is the crucial link between dynamics and energy. The <em>net</em> work done on an object equals its change in kinetic energy: $W_{net} = \\Delta K$. This is a powerful shortcut.</li>
+            <li><strong>Potential Energy ($U$):</strong> Stored energy. For F=ma, you'll mainly see two types:
+                <ul>
+                    <li>Gravitational: $U_g = mgh$ (near a planet's surface)</li>
+                    <li>Elastic (Spring): $U_s = \\frac{1}{2}kx^2$, where $k$ is the spring constant.</li>
+                </ul>
+            </li>
+            <li><strong>Conservation of Mechanical Energy:</strong> If only conservative forces (like gravity and ideal springs) do work, then the total mechanical energy $E = K + U$ of a system doesn't change. So, $K_i + U_i = K_f + U_f$.</li>
+            <li><strong>Beyond Conservation:</strong> If non-conservative forces like friction are present, mechanical energy is <em>not</em> conserved. The work done by these forces equals the change in total mechanical energy: $W_{friction} = \\Delta E = (K_f + U_f) - (K_i + U_i)$.</li>
+            <li><strong>Power ($P$):</strong> The rate at which work is done. $P_{avg} = \\frac{W}{t}$, and the instantaneous power is $P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v}$.</li>
+        </ul>`
+    },
+    {
+        topic: 'Momentum',
+        content: `<h3>Core Concepts</h3>
+        <p>Momentum is all about collisions and interactions within a system. It's another vector quantity, and its conservation is one of the most fundamental principles in physics.</p>
+        <ul>
+            <li><strong>Linear Momentum ($\vec{p}$):</strong> Defined as $\\vec{p} = m\\vec{v}$. Think of it as "mass in motion."</li>
+            <li><strong>Impulse ($\vec{J}$):</strong> The change in momentum. It's caused by a force acting over a period of time: $\\vec{J} = \\int \\vec{F} dt = \\Delta \\vec{p}$. This is really just Newton's second law in a different suit: $\\vec{F} = \\frac{d\\vec{p}}{dt}$.</li>
+            <li><strong>Conservation of Linear Momentum:</strong> This is the main event. If the <em>net external force</em> on a system of objects is zero, the total momentum of that system is conserved. $\\sum \\vec{p}_{initial} = \\sum \\vec{p}_{final}$. This is why it's so useful for analyzing explosions and collisions, where the internal forces are huge but brief, and external forces (like gravity) are negligible during the interaction.</li>
+        </ul>
+        <h4>Types of Collisions:</h4>
+        <ol>
+            <li><strong>Elastic:</strong> Both momentum and kinetic energy are conserved. The objects bounce off each other perfectly.</li>
+            <li><strong>Inelastic:</strong> Momentum is conserved, but kinetic energy is not. Some energy is lost to heat, sound, or deformation.</li>
+            <li><strong>Perfectly Inelastic:</strong> The objects stick together after the collision. Momentum is still conserved, but the maximum possible kinetic energy is lost.</li>
+        </ol>
+        <p><strong>Center of Mass (CM):</strong> The center of mass of a system is a weighted average of the positions of its parts. The velocity of the CM is special: $\\vec{v}_{cm} = \\frac{\\sum m_i \\vec{v}_i}{M_{total}} = \\frac{\\vec{p}_{total}}{M_{total}}$. If there are no external forces, $\\vec{p}_{total}$ is constant, which means the Center of Mass moves at a constant velocity, regardless of how complex the interactions are within the system!</p>`
+    },
+    {
+        topic: 'Rotational Motion',
+        content: `<h3>Core Concepts</h3>
+        <p>Think of rotational motion as a complete parallel to the linear motion you already know. For every concept in kinematics and dynamics, there is a rotational analog. The key is to learn the new variables and their relationships.</p>
+        <h4>The Analogy is Everything:</h4>
+        <table style="width:100%; border-collapse: collapse;">
+            <tr style="background-color:#f2f2f2;">
+                <th style="padding: 8px; border: 1px solid #ddd;">Linear Concept</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Rotational Analog</th>
+                <th style="padding: 8px; border: 1px solid #ddd;">Relationship</th>
+            </tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Position ($x$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angle ($\\theta$)</td><td style="padding: 8px; border: 1px solid #ddd;">$x = r\\theta$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Velocity ($v$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Velocity ($\\omega$)</td><td style="padding: 8px; border: 1px solid #ddd;">$v = r\\omega$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Acceleration ($a$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Acceleration ($\\alpha$)</td><td style="padding: 8px; border: 1px solid #ddd;">$a_{tan} = r\\alpha$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Mass ($m$, inertia)</td><td style="padding: 8px; border: 1px solid #ddd;">Moment of Inertia ($I$)</td><td style="padding: 8px; border: 1px solid #ddd;">$I = \\sum m_i r_i^2$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Force ($F$)</td><td style="padding: 8px; border: 1px solid #ddd;">Torque ($\\tau$)</td><td style="padding: 8px; border: 1px solid #ddd;">$\\vec{\\tau} = \\vec{r} \\times \\vec{F}$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">$\\sum F = ma$</td><td style="padding: 8px; border: 1px solid #ddd;">$\\sum \\tau = I\\alpha$</td><td style="padding: 8px; border: 1px solid #ddd;">Newton's 2nd Law for Rotation</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Momentum ($p=mv$)</td><td style="padding: 8px; border: 1px solid #ddd;">Angular Momentum ($L=I\\omega$)</td><td style="padding: 8px; border: 1px solid #ddd;">$\\vec{L} = \\vec{r} \\times \\vec{p}$</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;">Kinetic Energy ($K=\\frac{1}{2}mv^2$)</td><td style="padding: 8px; border: 1px solid #ddd;">Rotational K ($K=\\frac{1}{2}I\\omega^2$)</td><td style="padding: 8px; border: 1px solid #ddd;">Energy of Rotation</td></tr>
+        </table>
+        <p><strong>Rolling Without Slipping:</strong> This is a common and important special case. It connects translation and rotation. An object that rolls without slipping has a total kinetic energy that is the sum of its translational and rotational kinetic energies: $K_{total} = K_{trans} + K_{rot} = \\frac{1}{2}mv_{cm}^2 + \\frac{1}{2}I_{cm}\\omega^2$. The no-slip condition is $v_{cm} = R\\omega$.</p>
+        <p><strong>Conservation of Angular Momentum:</strong> Just as momentum is conserved when there's no net external force, angular momentum ($\vec{L}$) is conserved when there's no net external <em>torque</em>. This is why an ice skater spins faster when they pull their arms in: their moment of inertia ($I$) decreases, so their angular velocity ($\omega$) must increase to keep $L = I\omega$ constant.</p>`
+    },
+    {
+        topic: 'Oscillations',
+        content: `<h3>Core Concepts</h3>
+        <p>Oscillations are everywhere, from a swinging pendulum to the vibrations of an atom. The most important type to master is <strong>Simple Harmonic Motion (SHM)</strong>. An object undergoes SHM if it experiences a restoring force proportional to its displacement from equilibrium: $F_{restore} = -kx$.</p>
+        <p>The equation of motion for SHM is $\\frac{d^2x}{dt^2} + \\omega^2 x = 0$. Don't let the calculus scare you; the important thing is its solution:</p>
+        <ul>
+            <li><strong>Position:</strong> $x(t) = A\\cos(\\omega t + \\phi)$</li>
+            <li>$A$ is the <strong>Amplitude</strong>: the maximum displacement from equilibrium.</li>
+            <li>$\\omega$ is the <strong>Angular Frequency</strong>: it dictates how fast the oscillations are. It's the most important parameter!</li>
+            <li>$\\phi$ is the <strong>Phase Constant</strong>: it's determined by the initial conditions (where the object is at $t=0$).</li>
+        </ul>
+        <h4>Key Formulas for Period ($T$) and Angular Frequency ($\\omega$):</h4>
+        <p>The period $T$ is the time for one full oscillation, and it's related to $\\omega$ by $T = \\frac{2\\pi}{\\omega}$.</p>
+        <ul>
+            <li><strong>Mass-Spring System:</strong> $\\omega = \\sqrt{\\frac{k}{m}}$, so $T = 2\\pi\\sqrt{\\frac{m}{k}}$. Notice that the period does <em>not</em> depend on the amplitude!</li>
+            <li><strong>Simple Pendulum (small angles):</strong> $\\omega = \\sqrt{\\frac{g}{L}}$, so $T = 2\\pi\\sqrt{\\frac{L}{g}}$. The small angle approximation ($\\sin\\theta \\approx \\theta$) is what makes this simple harmonic motion.</li>
+            <li><strong>Physical Pendulum:</strong> For any object swinging about a pivot point, $T = 2\\pi\\sqrt{\\frac{I}{mgd}}$, where $I$ is the moment of inertia about the pivot and $d$ is the distance from the pivot to the center of mass.</li>
+        </ul>
+        <p><strong>Energy in SHM:</strong> In an ideal SHM system, total mechanical energy is conserved. It continuously transforms between potential and kinetic energy. The total energy is constant and can be expressed as $E = K + U = \\frac{1}{2}mv^2 + \\frac{1}{2}kx^2 = \\frac{1}{2}kA^2$. At the endpoints ($x=\\pm A$), all the energy is potential. At the equilibrium point ($x=0$), all the energy is kinetic.</p>`
+    },
+    {
+        topic: 'Gravitation',
+        content: `<h3>Core Concepts</h3>
+        <p>For problems involving planets, satellites, and stars, we need to upgrade from $F_g=mg$. We turn to Newton's universal law, which describes gravity as an attractive force between any two objects with mass.</p>
+        <ul>
+            <li><strong>Newton's Law of Universal Gravitation:</strong> The force between two masses $m_1$ and $m_2$ separated by a distance $r$ is $F_G = G\\frac{m_1 m_2}{r^2}$. This is an inverse-square law. The constant $G$ is the universal gravitational constant.</li>
+            <li><strong>Gravitational Potential Energy:</strong> For universal gravitation, the potential energy is defined to be zero at an infinite distance. This gives the formula $U_G = -G\\frac{m_1 m_2}{r}$. The negative sign is important; it signifies a bound system. It takes positive work to separate the masses.</li>
+        </ul>
+        <h4>Orbital Mechanics: The Dance of the Cosmos</h4>
+        <p>For a satellite of mass $m$ in a stable circular orbit around a planet of mass $M$ (where $M \\gg m$):</p>
+        <ol>
+            <li><strong>The centripetal force is provided by gravity:</strong> $G\\frac{Mm}{r^2} = \\frac{mv^2}{r}$. You can use this to find the required orbital speed $v$ for a given radius $r$.</li>
+            <li><strong>Total Energy of an Orbit:</strong> The total energy is $E = K + U = \\frac{1}{2}mv^2 - G\\frac{Mm}{r}$. By substituting $v^2$ from the force equation, we get a beautifully simple result for the total energy: $E_{orbit} = -\\frac{GMm}{2r}$. The energy of any bound orbit is negative.</li>
+            <li><strong>Escape Velocity:</strong> To escape a planet's gravity, an object's total energy must be at least zero. We can find the minimum launch speed (escape velocity) by setting the final energy at $r=\\infty$ to zero: $\\frac{1}{2}mv_{esc}^2 - \\frac{GMm}{R} = 0$, which gives $v_{esc} = \\sqrt{\\frac{2GM}{R}}$.</li>
+        </ol>
+        <p><strong>Kepler's Laws:</strong> These describe planetary motion and are direct consequences of Newton's law.</p>
+        <ul>
+            <li><strong>1st Law:</strong> Planets orbit in ellipses with the Sun at one focus. (A circle is a special case of an ellipse).</li>
+            <li><strong>2nd Law:</strong> A line connecting a planet to the Sun sweeps out equal areas in equal times. This is a statement of the <strong>conservation of angular momentum</strong> for an orbiting body.</li>
+            <li><strong>3rd Law:</strong> The square of the orbital period is proportional to the cube of the semi-major axis ($T^2 \\propto a^3$). For circular orbits, this becomes $T^2 = \\left(\\frac{4\\pi^2}{GM}\\right)r^3$.</li>
+        </ul>`
     }
 ];
 
