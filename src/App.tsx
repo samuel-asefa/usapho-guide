@@ -112,6 +112,33 @@ const problemDatabase: Problem[] = [
     solution: 'For an Atwood machine, the acceleration is $a = \\frac{(m_2 - m_1)g}{m_1 + m_2}$.<br/>Substituting values: $a = \\frac{(3-2) \\times 10}{2+3} = \\frac{10}{5} = 2 \\, \\text{m/s}^2$.<br/>The heavier mass accelerates downward.'
   },
   {
+    id: 'energy_02',
+    topic: 'Energy & Work',
+    difficulty: 'medium',
+    question: 'A spring with spring constant $k = 200 \\, \\text{N/m}$ is compressed by $0.3 \\, \\text{m}$. How much elastic potential energy is stored?',
+    options: [{ text: '$6 \\, \\text{J}$' }, { text: '$9 \\, \\text{J}$' }, { text: '$12 \\, \\text{J}$' }, { text: '$18 \\, \\text{J}$' }],
+    correctOptionIndex: 1,
+    solution: 'The elastic potential energy stored in a spring is $U_s = \\frac{1}{2}kx^2$.<br/>Substituting values: $U_s = \\frac{1}{2}(200)(0.3)^2 = \\frac{1}{2}(200)(0.09) = 100 \\times 0.09 = 9 \\, \\text{J}$.'
+  },
+  {
+    id: 'energy_03',
+    topic: 'Energy & Work',
+    difficulty: 'hard',
+    question: 'A $5 \\, \\text{kg}$ block slides down a rough incline of height $4 \\, \\text{m}$ and reaches the bottom with a speed of $6 \\, \\text{m/s}$. How much energy was lost to friction? (Use $g = 10 \\, \\text{m/s}^2$)',
+    options: [{ text: '$90 \\, \\text{J}$' }, { text: '$110 \\, \\text{J}$' }, { text: '$120 \\, \\text{J}$' }, { text: '$200 \\, \\text{J}$' }],
+    correctOptionIndex: 1,
+    solution: 'Initial energy: $E_i = mgh = 5 \\times 10 \\times 4 = 200 \\, \\text{J}$ (all potential).<br/>Final energy: $E_f = \\frac{1}{2}mv^2 = \\frac{1}{2}(5)(6)^2 = \\frac{1}{2}(5)(36) = 90 \\, \\text{J}$ (all kinetic).<br/>Energy lost to friction: $E_{friction} = E_i - E_f = 200 - 90 = 110 \\, \\text{J}$.'
+  },
+  {
+    id: 'energy_04',
+    topic: 'Energy & Work',
+    difficulty: 'medium',
+    question: 'A force of $50 \\, \\text{N}$ is applied at an angle of $60^\\circ$ to the horizontal to drag a box $10 \\, \\text{m}$ along the ground. How much work is done by this force?',
+    options: [{ text: '$250 \\, \\text{J}$' }, { text: '$433 \\, \\text{J}$' }, { text: '$500 \\, \\text{J}$' }, { text: '$866 \\, \\text{J}$' }],
+    correctOptionIndex: 0,
+    solution: 'Work is $W = Fd\\cos\\theta$ where only the component parallel to displacement does work.<br/>$W = 50 \\times 10 \\times \\cos(60^\\circ) = 500 \\times 0.5 = 250 \\, \\text{J}$.'
+  },
+  {
     id: 'rot_01',
     topic: 'Rotational Motion',
     difficulty: 'hard',
