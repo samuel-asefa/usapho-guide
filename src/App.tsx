@@ -124,6 +124,7 @@ const formularyDatabase: Record<string, Formula[]> = {
         { name: 'Velocity-Time', equation: 'v = v_0 + at', description: 'Final velocity under constant acceleration.'},
         { name: 'Position-Time', equation: 'x = x_0 + v_0t + \\frac{1}{2}at^2', description: 'Final position under constant acceleration.'},
         { name: 'Velocity-Position', equation: 'v^2 = v_0^2 + 2a\\Delta x', description: 'Final velocity without time dependence.'},
+        { name: 'Average Velocity', equation: '\\Delta x = \\frac{v_0+v}{2}t', description: 'Position using average velocity.'},
     ],
     'Dynamics': [
         { name: "Newton's Second Law", equation: '\\sum \\vec{F} = m\\vec{a}', description: 'Net force equals mass times acceleration.'},
