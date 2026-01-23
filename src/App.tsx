@@ -138,6 +138,13 @@ const formularyDatabase: Record<string, Formula[]> = {
         { name: 'Conservation of Energy', equation: 'K_i + U_i = K_f + U_f', description: 'Total mechanical energy is conserved.'},
         { name: 'Power', equation: 'P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v}', description: 'Rate of doing work.'},
     ],
+    'Momentum': [
+        { name: 'Linear Momentum', equation: '\\vec{p} = m\\vec{v}', description: 'Momentum of an object.'},
+        { name: 'Impulse', equation: '\\vec{J} = \\int \\vec{F} dt = \\Delta \\vec{p}', description: 'Change in momentum.'},
+        { name: 'Conservation of Momentum', equation: '\\sum \\vec{p}_i = \\sum \\vec{p}_f', description: 'Total momentum conserved when no external forces.'},
+        { name: 'Elastic Collision (1D)', equation: 'v_{1f} = \\frac{m_1-m_2}{m_1+m_2}v_{1i}', description: 'Final velocity of first mass after collision.'},
+        { name: 'Center of Mass Velocity', equation: '\\vec{v}_{cm} = \\frac{\\sum m_i \\vec{v}_i}{M_{total}}', description: 'Velocity of the center of mass.'},
+    ],
     'Rotational Motion': [
         { name: "Torque", equation: '\\vec{\\tau} = \\vec{r} \\times \\vec{F}', description: 'Rotational equivalent of force.'},
         { name: "Newton's Second Law (Rotation)", equation: '\\sum \\tau = I\\alpha', description: 'Net torque equals moment of inertia times angular acceleration.'},
