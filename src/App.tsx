@@ -94,6 +94,24 @@ const problemDatabase: Problem[] = [
     solution: 'We use the principle of conservation of mechanical energy, since there is no friction. The initial potential energy ($PE_i$) at the top is converted into kinetic energy ($KE_f$) at the bottom.<br/>$PE_i + KE_i = PE_f + KE_f$<br/>$mgh + 0 = 0 + \\frac{1}{2}mv^2$<br/>The mass $m$ cancels from both sides: $gh = \\frac{1}{2}v^2$.<br/>Solving for $v$: $v = \\sqrt{2gh}$.<br/>$v = \\sqrt{2(9.8 \\, \\text{m/s}^2)(5 \\, \\text{m})} = \\sqrt{98} \\approx 9.9 \\, \\text{m/s}$.'
   },
   {
+    id: 'dyn_02',
+    topic: 'Dynamics',
+    difficulty: 'easy',
+    question: 'A $10 \\, \\text{kg}$ box rests on a horizontal surface. The coefficient of static friction is $\\mu_s = 0.4$. What is the minimum horizontal force required to start moving the box? (Use $g = 10 \\, \\text{m/s}^2$)',
+    options: [{ text: '$20 \\, \\text{N}$' }, { text: '$30 \\, \\text{N}$' }, { text: '$40 \\, \\text{N}$' }, { text: '$50 \\, \\text{N}$' }],
+    correctOptionIndex: 2,
+    solution: 'The maximum static friction force is $f_s = \\mu_s N$.<br/>Since the surface is horizontal, the normal force $N = mg = 10 \\times 10 = 100 \\, \\text{N}$.<br/>Therefore, $f_s = 0.4 \\times 100 = 40 \\, \\text{N}$.<br/>The minimum force to overcome static friction is $40 \\, \\text{N}$.'
+  },
+  {
+    id: 'dyn_03',
+    topic: 'Dynamics',
+    difficulty: 'hard',
+    question: 'Two blocks of masses $m_1 = 2 \\, \\text{kg}$ and $m_2 = 3 \\, \\text{kg}$ are connected by a massless string over a frictionless pulley (Atwood machine). What is the acceleration of the system? (Use $g = 10 \\, \\text{m/s}^2$)',
+    options: [{ text: '$1 \\, \\text{m/s}^2$' }, { text: '$2 \\, \\text{m/s}^2$' }, { text: '$3 \\, \\text{m/s}^2$' }, { text: '$4 \\, \\text{m/s}^2$' }],
+    correctOptionIndex: 1,
+    solution: 'For an Atwood machine, the acceleration is $a = \\frac{(m_2 - m_1)g}{m_1 + m_2}$.<br/>Substituting values: $a = \\frac{(3-2) \\times 10}{2+3} = \\frac{10}{5} = 2 \\, \\text{m/s}^2$.<br/>The heavier mass accelerates downward.'
+  },
+  {
     id: 'rot_01',
     topic: 'Rotational Motion',
     difficulty: 'hard',
