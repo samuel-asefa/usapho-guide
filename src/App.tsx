@@ -157,6 +157,33 @@ const problemDatabase: Problem[] = [
     solution: 'For a one-dimensional elastic collision, we can use the formula for the final velocity of the first mass ($v_{1f}$):<br>$v_{1f} = \\left(\\frac{m_1-m_2}{m_1+m_2}\\right)v_{1i}$.<br/>Here, $m_1=4 \\, \\text{kg}$, $m_2=1 \\, \\text{kg}$, and $v_{1i}=5 \\, \\text{m/s}$.<br/>Plugging in the values: $v_{1f} = \\left(\\frac{4-1}{4+1}\\right)(5 \\, \\text{m/s}) = \\left(\\frac{3}{5}\\right)(5 \\, \\text{m/s}) = 3 \\, \\text{m/s}$.'
   },
   {
+    id: 'mom_02',
+    topic: 'Momentum',
+    difficulty: 'easy',
+    question: 'A $0.5 \\, \\text{kg}$ ball moving at $10 \\, \\text{m/s}$ strikes a wall and bounces back with the same speed. What is the magnitude of the change in momentum?',
+    options: [{ text: '$0 \\, \\text{kg·m/s}$' }, { text: '$5 \\, \\text{kg·m/s}$' }, { text: '$10 \\, \\text{kg·m/s}$' }, { text: '$15 \\, \\text{kg·m/s}$' }],
+    correctOptionIndex: 2,
+    solution: 'Initial momentum: $p_i = mv = 0.5 \\times 10 = 5 \\, \\text{kg·m/s}$ (in positive direction).<br/>Final momentum: $p_f = 0.5 \\times (-10) = -5 \\, \\text{kg·m/s}$ (opposite direction).<br/>Change in momentum: $\\Delta p = p_f - p_i = -5 - 5 = -10 \\, \\text{kg·m/s}$.<br/>Magnitude: $|\\Delta p| = 10 \\, \\text{kg·m/s}$.'
+  },
+  {
+    id: 'mom_03',
+    topic: 'Momentum',
+    difficulty: 'medium',
+    question: 'A $2 \\, \\text{kg}$ object moving at $8 \\, \\text{m/s}$ collides and sticks to a $3 \\, \\text{kg}$ stationary object. What is their final velocity?',
+    options: [{ text: '$2.4 \\, \\text{m/s}$' }, { text: '$3.2 \\, \\text{m/s}$' }, { text: '$4.0 \\, \\text{m/s}$' }, { text: '$5.3 \\, \\text{m/s}$' }],
+    correctOptionIndex: 1,
+    solution: 'This is a perfectly inelastic collision. Momentum is conserved: $m_1v_1 + m_2v_2 = (m_1+m_2)v_f$.<br/>$2(8) + 3(0) = (2+3)v_f$<br/>$16 = 5v_f$<br/>$v_f = \\frac{16}{5} = 3.2 \\, \\text{m/s}$.'
+  },
+  {
+    id: 'mom_04',
+    topic: 'Momentum',
+    difficulty: 'hard',
+    question: 'An object explodes into two fragments. Fragment A has mass $m$ and velocity $3v$ to the right. Fragment B has mass $2m$. What is the velocity of fragment B if the object was initially at rest?',
+    options: [{ text: '$1.5v$ to the left' }, { text: '$1.5v$ to the right' }, { text: '$3v$ to the left' }, { text: '$6v$ to the left' }],
+    correctOptionIndex: 0,
+    solution: 'Conservation of momentum: $p_{initial} = p_{final}$.<br/>$0 = m(3v) + 2m(v_B)$<br/>$0 = 3mv + 2mv_B$<br/>$v_B = -\\frac{3v}{2} = -1.5v$.<br/>The negative sign indicates fragment B moves to the left at $1.5v$.'
+  },
+  {
     id: 'osc_01',
     topic: 'Oscillations',
     difficulty: 'medium',
