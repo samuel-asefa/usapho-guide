@@ -219,6 +219,33 @@ const problemDatabase: Problem[] = [
     correctOptionIndex: 2,
     solution: 'The escape velocity from a celestial body is given by the formula $v_{esc} = \\sqrt{\\frac{2GM}{R}}$.<br/>For Earth, $v_E = \\sqrt{\\frac{2GM_E}{R_E}}$.<br/>For the new planet, the mass is $M_p = 2M_E$ and the radius is $R_p = R_E/2$.<br/>The escape velocity from the planet ($v_p$) is: $v_p = \\sqrt{\\frac{2G(2M_E)}{(R_E/2)}} = \\sqrt{\\frac{4GM_E}{R_E/2}} = \\sqrt{4 \\cdot \\frac{2GM_E}{R_E}}$.<br/>We can factor out the 4: $v_p = \\sqrt{4} \\cdot \\sqrt{\\frac{2GM_E}{R_E}} = 2 v_E$.'
   },
+  {
+    id: 'osc_02',
+    topic: 'Oscillations',
+    difficulty: 'easy',
+    question: 'A mass-spring system has a spring constant $k = 100 \\, \\text{N/m}$ and mass $m = 1 \\, \\text{kg}$. What is the period of oscillation?',
+    options: [{ text: '$0.2\\pi \\, \\text{s}$' }, { text: '$0.4\\pi \\, \\text{s}$' }, { text: '$0.6\\pi \\, \\text{s}$' }, { text: '$\\pi \\, \\text{s}$' }],
+    correctOptionIndex: 0,
+    solution: 'The period of a mass-spring system is $T = 2\\pi\\sqrt{\\frac{m}{k}}$.<br/>$T = 2\\pi\\sqrt{\\frac{1}{100}} = 2\\pi\\sqrt{0.01} = 2\\pi(0.1) = 0.2\\pi \\, \\text{s}$.'
+  },
+  {
+    id: 'osc_03',
+    topic: 'Oscillations',
+    difficulty: 'medium',
+    question: 'A simple harmonic oscillator has amplitude $A = 0.1 \\, \\text{m}$ and maximum speed $v_{max} = 2 \\, \\text{m/s}$. What is the angular frequency $\\omega$?',
+    options: [{ text: '$10 \\, \\text{rad/s}$' }, { text: '$20 \\, \\text{rad/s}$' }, { text: '$30 \\, \\text{rad/s}$' }, { text: '$40 \\, \\text{rad/s}$' }],
+    correctOptionIndex: 1,
+    solution: 'For SHM, the maximum speed occurs at equilibrium: $v_{max} = A\\omega$.<br/>Solving for $\\omega$: $\\omega = \\frac{v_{max}}{A} = \\frac{2}{0.1} = 20 \\, \\text{rad/s}$.'
+  },
+  {
+    id: 'osc_04',
+    topic: 'Oscillations',
+    difficulty: 'hard',
+    question: 'A simple pendulum of length $L$ has period $T$ on Earth. If taken to a planet where gravitational acceleration is $4g$, what is the new period?',
+    options: [{ text: '$\\frac{T}{4}$' }, { text: '$\\frac{T}{2}$' }, { text: '$2T$' }, { text: '$4T$' }],
+    correctOptionIndex: 1,
+    solution: 'The period of a simple pendulum is $T = 2\\pi\\sqrt{\\frac{L}{g}}$, so $T \\propto \\frac{1}{\\sqrt{g}}$.<br/>If gravity increases by a factor of 4: $T_{new} = T\\sqrt{\\frac{g}{4g}} = T\\sqrt{\\frac{1}{4}} = \\frac{T}{2}$.'
+  },
 ];
 
 const resourceDatabase: Resource[] = [
