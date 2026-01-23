@@ -148,6 +148,24 @@ const problemDatabase: Problem[] = [
     solution: 'We apply Newton\'s Second Law for both linear and rotational motion.<br>1. Linear motion down the incline: $\\sum F_x = Mg\\sin\\theta - f_s = Ma$, where $f_s$ is the force of static friction.<br>2. Rotational motion: $\\sum \\tau = f_s R = I\\alpha$.<br>For rolling without slipping, we have the constraint $a = \\alpha R$, so $\\alpha = a/R$.<br>Substitute $I$ and $\\alpha$ into the torque equation: $f_s R = (\\frac{2}{5}MR^2)(\\frac{a}{R}) \\implies f_s = \\frac{2}{5}Ma$.<br>Now substitute this expression for $f_s$ back into the linear force equation:<br>$Mg\\sin\\theta - \\frac{2}{5}Ma = Ma$<br>$Mg\\sin\\theta = Ma + \\frac{2}{5}Ma = \\frac{7}{5}Ma$<br>Canceling $M$, we find the acceleration: $a = \\frac{5}{7}g\\sin\\theta$.'
   },
   {
+    id: 'rot_02',
+    topic: 'Rotational Motion',
+    difficulty: 'medium',
+    question: 'A disk of mass $M$ and radius $R$ rotates with angular velocity $\\omega$. What is its rotational kinetic energy? (For a disk, $I = \\frac{1}{2}MR^2$)',
+    options: [{ text: '$\\frac{1}{2}MR^2\\omega^2$' }, { text: '$\\frac{1}{4}MR^2\\omega^2$' }, { text: '$MR^2\\omega^2$' }, { text: '$\\frac{1}{8}MR^2\\omega^2$' }],
+    correctOptionIndex: 1,
+    solution: 'Rotational kinetic energy is $K_{rot} = \\frac{1}{2}I\\omega^2$.<br/>For a disk, $I = \\frac{1}{2}MR^2$.<br/>Substituting: $K_{rot} = \\frac{1}{2}\\left(\\frac{1}{2}MR^2\\right)\\omega^2 = \\frac{1}{4}MR^2\\omega^2$.'
+  },
+  {
+    id: 'rot_03',
+    topic: 'Rotational Motion',
+    difficulty: 'easy',
+    question: 'A wheel of radius $0.5 \\, \\text{m}$ rotates at $4 \\, \\text{rad/s}$. What is the linear speed of a point on the rim?',
+    options: [{ text: '$1 \\, \\text{m/s}$' }, { text: '$2 \\, \\text{m/s}$' }, { text: '$4 \\, \\text{m/s}$' }, { text: '$8 \\, \\text{m/s}$' }],
+    correctOptionIndex: 1,
+    solution: 'The relationship between linear speed $v$ and angular velocity $\\omega$ is $v = r\\omega$.<br/>$v = 0.5 \\times 4 = 2 \\, \\text{m/s}$.'
+  },
+  {
     id: 'mom_01',
     topic: 'Momentum',
     difficulty: 'medium',
