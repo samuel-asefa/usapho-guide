@@ -133,6 +133,13 @@ const formularyDatabase: Record<string, Formula[]> = {
         { name: "Torque", equation: '\\vec{\\tau} = \\vec{r} \\times \\vec{F}', description: 'Rotational equivalent of force.'},
         { name: "Newton's Second Law (Rotation)", equation: '\\sum \\tau = I\\alpha', description: 'Net torque equals moment of inertia times angular acceleration.'},
     ],
+    'Oscillations': [
+    { name: 'Angular Frequency (Mass-Spring)', equation: '\\omega = \\sqrt{\\frac{k}{m}}', description: 'Natural frequency of a mass-spring system.'},
+    { name: 'Period (Mass-Spring)', equation: 'T = 2\\pi\\sqrt{\\frac{m}{k}}', description: 'Time for one complete oscillation.'},
+    { name: 'Simple Pendulum Period', equation: 'T = 2\\pi\\sqrt{\\frac{L}{g}}', description: 'Period for small angle oscillations.'},
+    { name: 'SHM Position', equation: 'x(t) = A\\cos(\\omega t + \\phi)', description: 'Displacement as a function of time.'},
+    { name: 'Total Energy in SHM', equation: 'E = \\frac{1}{2}kA^2', description: 'Constant total mechanical energy.'},
+]
 };
 
 const notesDatabase: TopicNote[] = [
