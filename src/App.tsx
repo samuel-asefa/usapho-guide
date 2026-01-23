@@ -148,6 +148,10 @@ const formularyDatabase: Record<string, Formula[]> = {
     'Rotational Motion': [
         { name: "Torque", equation: '\\vec{\\tau} = \\vec{r} \\times \\vec{F}', description: 'Rotational equivalent of force.'},
         { name: "Newton's Second Law (Rotation)", equation: '\\sum \\tau = I\\alpha', description: 'Net torque equals moment of inertia times angular acceleration.'},
+        { name: 'Rolling without Slipping', equation: 'v_{cm} = R\\omega', description: 'Constraint for rolling motion.'},
+        { name: 'Rotational KE', equation: 'K_{rot} = \\frac{1}{2}I\\omega^2', description: 'Kinetic energy of rotation.'},
+        { name: 'Angular Momentum', equation: 'L = I\\omega', description: 'Rotational momentum.'},
+        { name: 'Conservation of Angular Momentum', equation: 'L_i = L_f', description: 'Conserved when no external torque.'},
     ],
     'Oscillations': [
     { name: 'Angular Frequency (Mass-Spring)', equation: '\\omega = \\sqrt{\\frac{k}{m}}', description: 'Natural frequency of a mass-spring system.'},
