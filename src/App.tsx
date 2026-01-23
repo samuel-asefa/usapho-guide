@@ -139,7 +139,15 @@ const formularyDatabase: Record<string, Formula[]> = {
     { name: 'Simple Pendulum Period', equation: 'T = 2\\pi\\sqrt{\\frac{L}{g}}', description: 'Period for small angle oscillations.'},
     { name: 'SHM Position', equation: 'x(t) = A\\cos(\\omega t + \\phi)', description: 'Displacement as a function of time.'},
     { name: 'Total Energy in SHM', equation: 'E = \\frac{1}{2}kA^2', description: 'Constant total mechanical energy.'},
-]
+    ],
+    'Gravitation': [
+        { name: 'Universal Gravitation', equation: 'F_G = G\\frac{m_1 m_2}{r^2}', description: 'Gravitational force between two masses.'},
+        { name: 'Gravitational Potential Energy', equation: 'U_G = -G\\frac{m_1 m_2}{r}', description: 'Potential energy in a gravitational field.'},
+        { name: 'Orbital Speed', equation: 'v = \\sqrt{\\frac{GM}{r}}', description: 'Speed required for circular orbit.'},
+        { name: 'Escape Velocity', equation: 'v_{esc} = \\sqrt{\\frac{2GM}{R}}', description: 'Minimum speed to escape gravitational pull.'},
+        { name: "Kepler's Third Law", equation: 'T^2 = \\frac{4\\pi^2}{GM}r^3', description: 'Relates orbital period to radius.'},
+    ]
+
 };
 
 const notesDatabase: TopicNote[] = [
