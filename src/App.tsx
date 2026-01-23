@@ -129,6 +129,15 @@ const formularyDatabase: Record<string, Formula[]> = {
         { name: "Newton's Second Law", equation: '\\sum \\vec{F} = m\\vec{a}', description: 'Net force equals mass times acceleration.'},
         { name: 'Static/Kinetic Friction', equation: 'f \\le \\mu N', description: 'Frictional force is proportional to the normal force.'},
     ],
+    'Energy & Work': [
+        { name: 'Work', equation: 'W = \\vec{F} \\cdot \\vec{d} = Fd\\cos\\theta', description: 'Work done by a force over displacement.'},
+        { name: 'Kinetic Energy', equation: 'K = \\frac{1}{2}mv^2', description: 'Energy of motion.'},
+        { name: 'Gravitational PE (near surface)', equation: 'U_g = mgh', description: 'Potential energy near Earth\'s surface.'},
+        { name: 'Elastic PE (Spring)', equation: 'U_s = \\frac{1}{2}kx^2', description: 'Energy stored in a spring.'},
+        { name: 'Work-Energy Theorem', equation: 'W_{net} = \\Delta K', description: 'Net work equals change in kinetic energy.'},
+        { name: 'Conservation of Energy', equation: 'K_i + U_i = K_f + U_f', description: 'Total mechanical energy is conserved.'},
+        { name: 'Power', equation: 'P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v}', description: 'Rate of doing work.'},
+    ],
     'Rotational Motion': [
         { name: "Torque", equation: '\\vec{\\tau} = \\vec{r} \\times \\vec{F}', description: 'Rotational equivalent of force.'},
         { name: "Newton's Second Law (Rotation)", equation: '\\sum \\tau = I\\alpha', description: 'Net torque equals moment of inertia times angular acceleration.'},
