@@ -58,6 +58,24 @@ const problemDatabase: Problem[] = [
     solution: 'We need a kinematic equation that relates final velocity ($v$), initial velocity ($v_0$), acceleration ($a$), and displacement ($\\Delta x$) without time. The appropriate equation is $v^2 = v_0^2 + 2a\\Delta x$.<br/>Given values: $v_0 = 0 \\, \\text{m/s}$ (starts from rest), $a = 2 \\, \\text{m/s}^2$, and $\\Delta x = 9 \\, \\text{m}$.<br/>Substitute the values: $v^2 = 0^2 + 2(2)(9) = 36 \\, \\text{m}^2/\\text{s}^2$.<br/>Taking the square root gives the final velocity: $v = \\sqrt{36} = 6 \\, \\text{m/s}$.'
   },
   {
+    id: 'kin_02',
+    topic: 'Kinematics',
+    difficulty: 'medium',
+    question: 'A ball is thrown vertically upward with an initial speed of $20 \\, \\text{m/s}$. How high does it rise before momentarily coming to rest? (Use $g = 10 \\, \\text{m/s}^2$)',
+    options: [{ text: '$10 \\, \\text{m}$' }, { text: '$20 \\, \\text{m}$' }, { text: '$30 \\, \\text{m}$' }, { text: '$40 \\, \\text{m}$' }],
+    correctOptionIndex: 1,
+    solution: 'At the highest point, the velocity is zero. We use $v^2 = v_0^2 + 2a\\Delta y$ with $v=0$, $v_0=20 \\, \\text{m/s}$, and $a=-g=-10 \\, \\text{m/s}^2$.<br/>$0 = (20)^2 + 2(-10)\\Delta y$<br/>$0 = 400 - 20\\Delta y$<br/>$\\Delta y = \\frac{400}{20} = 20 \\, \\text{m}$.'
+  },
+  {
+    id: 'kin_03',
+    topic: 'Kinematics',
+    difficulty: 'hard',
+    question: 'A projectile is launched at an angle of $45^\\circ$ with initial speed $v_0$. What is the maximum height reached? (Use $g$ for gravity)',
+    options: [{ text: '$\\frac{v_0^2}{4g}$' }, { text: '$\\frac{v_0^2}{2g}$' }, { text: '$\\frac{v_0^2}{g}$' }, { text: '$\\frac{v_0^2\\sin^2(45^\\circ)}{2g}$' }],
+    correctOptionIndex: 0,
+    solution: 'The vertical component of initial velocity is $v_{0y} = v_0\\sin(45^\\circ) = \\frac{v_0}{\\sqrt{2}}$.<br/>At maximum height, $v_y = 0$. Using $v_y^2 = v_{0y}^2 - 2g\\Delta y$:<br/>$0 = \\left(\\frac{v_0}{\\sqrt{2}}\\right)^2 - 2g\\Delta y$<br/>$2g\\Delta y = \\frac{v_0^2}{2}$<br/>$\\Delta y = \\frac{v_0^2}{4g}$.'
+  },
+  {
     id: 'dyn_01',
     topic: 'Dynamics',
     difficulty: 'medium',
